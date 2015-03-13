@@ -5,11 +5,10 @@
 
 #header{
     background-color:#ade;
+    margin: 5px;
+    padding: 5px;
 }
 
-#header>h1{
-    font-size:200%;
-}
 
 h2{
     font-size:150%;
@@ -17,6 +16,10 @@ h2{
     font-weight: bold;
     color:#F59222;
     text-align:center;
+}
+
+#member{
+
 }
 
 #content{
