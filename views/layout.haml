@@ -1,14 +1,22 @@
 !!! 5
 %html
   %head
+    %title Dev Team Directory
     %link(rel="stylesheet" href="http://yui.yahooapis.com/2.8.0r4/build/reset/reset-min.css")
     %link(rel="stylesheet" href="css/styles.css")
 
   %body
-  #wrapper
-    #nav
-      %ol
-        %a(href="/")
-          %li Home
-        %a(href="members")
-          %li Members
+    #wrapper
+      #nav
+        %ol
+          %a(href="/")
+            %li Home
+          %a(href="members")
+            %li Members
+
+      #content
+        =yield
+
+      #footer
+        %p
+          Copyright © 2015 CoverMyMeds LLC. All Rights Reserved
