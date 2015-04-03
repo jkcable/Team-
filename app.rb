@@ -1,6 +1,8 @@
-require 'rubygems'
-require 'sinatra'
-require 'haml'
+
+
+require "sinatra/activerecord"
+
+set :database, {adapter: "sqlite3", database: "team.sqlite3"}
 
 get '/' do
   haml :index
