@@ -5,12 +5,12 @@ ENV['RACK_ENV'] = 'test'
 require File.join(File.dirname(__FILE__), '..', '..', 'lib/app.rb')
 
 require 'capybara'
-require 'capybara/cucumber'
+require 'cucumber'
 require 'rspec'
 
 Capybara.app = team_dir
 
-class team_dirWorld
+class TEAM_DIR
   include Capybara::DSL
   include RSpec::Expectations
   include RSpec::Matchers
