@@ -1,5 +1,6 @@
 require "sinatra"
 require "sinatra/activerecord"
+require_relative "models/user"
 
 set :database, {adapter: "sqlite3", database: "team.sqlite3"}
 
@@ -8,5 +9,7 @@ get '/' do
 end
 
 get '/members' do
-  haml :members
+  @members = User.all
+  puts @members
+  haml :members, :locals => {:members => @members}
 end
