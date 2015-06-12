@@ -3,16 +3,16 @@
 - @members.each do | member |
 
   #member
-    %img{ :src => "JenniferC.jpg", :height => 128, :width => "128"}
+    %img{ :src => "/JenniferC.jpg", :height => 128, :width => "128"}
 
   #content
     %h2 Name:
     %p= member.name
     %h2 Title:
-    %p Software Test Technician
+    %p= member.title
     %h2 Location:
-    %p Columbus
+    %p= member.location
     %h2 Vertical:
-    %p Physician
+    %p= member.vertical
     %h2 Bio:
-    %p Six months as Software Test Engineer Intern at CMM. Prior experience as a graphic designer in newspaper industry before changing careers to web development.
+    %p= member.bio

@@ -10,6 +10,11 @@ end
 
 get '/members' do
   @members = User.all
-  puts @members
   haml :members, :locals => {:members => @members}
+end
+
+get '/members/:id/edit' do
+  id=params['id']
+  @member = User.find id
+  haml :edit, :locals => {:member => @member}
 end
