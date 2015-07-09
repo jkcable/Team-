@@ -14,3 +14,27 @@
   %p= member.vertical
   %h2 Bio:
   %p= member.bio
+
+  %form{ :action => "", :method => "post"}
+    %fieldset
+      %ol
+        %li
+          %label{:for => "name"} Name:
+          %input{:type => "text", :name => "name", :class => "text", :value => member.name}
+        %li
+          %label{:for => "title"} Title:
+          %input{:type => "text", :name => "title", :class => "text", :value => member.title}
+        %li
+          %label{:for => "location"} Location:
+          %input{:type => "text", :name => "location", :class => "text", :value => member.location}
+        %li
+          %label{:for => "vertical"} Vertical:
+          %input{:type => "text", :name => "vertical", :class => "text", :value => member.vertical}
+        -#%li
+          %label{:for => "anniversary"} Anniversary:
+          %input{:type => "text", :name => "anniversary", :class => "text", :value => member.anniversary}
+        %li
+          %label{:for => "bio"} Bio:
+          %textarea{:name => "bio"}
+            =member.bio
+      %input{:type => "submit", :value => "Update", :class => "button"}

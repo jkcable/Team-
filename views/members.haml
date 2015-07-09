@@ -14,5 +14,8 @@
     %p= member.location
     %h2 Vertical:
     %p= member.vertical
+    -#%h2 Anniversary:
+    -#%p= member.anniversary
     %h2 Bio:
     %p= member.bio
+    %a{:href => "/members/#{member.id}/edit", :class => "button"} edit
